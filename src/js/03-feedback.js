@@ -55,12 +55,12 @@ function saveRegisterData(form) {
 
 function onStorageEmailInputValue(e) {
   inputEmailCurrentValue = inputEmailEl.value;
-  console.log(inputEmailCurrentValue);
+  // console.log(inputEmailCurrentValue);
   localStorage.setItem('email-current-value', `${inputEmailCurrentValue}`);
 }
 
 function onStorageMessageInputValue(e) {
   inputMessageCurrentValue = inputMessageEl.value;
-  console.log(inputMessageCurrentValue);
+  // console.log(inputMessageCurrentValue);
   localStorage.setItem('message-current-value', `${inputMessageCurrentValue}`);
 }
