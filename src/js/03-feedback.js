@@ -13,6 +13,7 @@ function getStarterInputValue(storageInputValue) {
   if (storageInputValue) {
     storageInputValue = JSON.parse(storageInputValue);
     Object.entries(storageInputValue).forEach(([name, value]) => {
+      storageInputValue[name].value = value;
       formEl.elements[name].value = value;
     });
    return storageInputValue;
