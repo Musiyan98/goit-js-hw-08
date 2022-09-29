@@ -6,17 +6,17 @@ const formEl = document.querySelector('.feedback-form');
 formEl.addEventListener('input', throttle(onStorageInputValueChange, 500));
 formEl.addEventListener('submit', onProcessingForm);
 
-getStarterInputValue(storageInputValue);
+getStarterInputValue();
 
-function getStarterInputValue(storageInputValue) {
-  storageInputValue = localStorage.getItem('storageInputValue');
-  if (storageInputValue) {
-    storageInputValue = JSON.parse(storageInputValue);
-    Object.entries(storageInputValue).forEach(([name, value]) => {
-      storageInputValue[name].value = value;
+function getStarterInputValue() {
+  let storageSaveInputValue = localStorage.getItem('storageInputValue');
+  if (storageSaveInputValue) {
+    storageSaveInputValue = JSON.parse(storageSaveInputValue);
+    Object.entries(storageSaveInputValue).forEach(([name, value]) => {
+      storageInputValue[name] = value;
       formEl.elements[name].value = value;
     });
-   return storageInputValue;
+    // return storageInputValue;
   }
 }
 
