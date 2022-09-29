@@ -15,6 +15,7 @@ function getStarterInputValue(storageInputValue) {
     Object.entries(storageInputValue).forEach(([name, value]) => {
       formEl.elements[name].value = value;
     });
+   return storageInputValue;
   }
 }
 
