@@ -16,7 +16,6 @@ function getStarterInputValue() {
       storageInputValue[name] = value;
       formEl.elements[name].value = value;
     });
-    // return storageInputValue;
   }
 }
 
@@ -30,6 +29,7 @@ function onProcessingForm(e) {
 
   saveRegisterData(e);
   e.currentTarget.reset();
+  storageInputValue = {};
   localStorage.removeItem('storageInputValue');
 }
 
